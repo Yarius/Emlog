@@ -46,7 +46,7 @@
     }
 ?>
 </div>
-<div class="show_advset" onclick="displayToggle('advset', 1);">Дополнительные параметры</div>
+<div class="show_advset" onclick="displayToggle('advset', 1);">Дополнительно</div>
 <div id="advset">
 <div>Вводный текст: </div>
 <div><textarea id="excerpt" name="excerpt" style="width:800px; height:260px; border:#CCCCCC solid 1px;"></textarea></div>
