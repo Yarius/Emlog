@@ -445,17 +445,17 @@ INSERT INTO {$db_prefix}user (uid, username, password, role) VALUES (1,'$admin',
 			$DB->query($sql);
 		}
 	}
-	//重建缓存
+	//Перестраивание кеша
 	$CACHE->updateCache();
 	$result .= "
 		<p style=\"font-size:24px; border-bottom:1px solid #E6E6E6; padding:10px 0px;\">Поздравляем, установка прошла успешно!</p>
-		<p>您的emlog已经安装好了，现在可以开始您的创作了，就这么简单!</p>
-		<p><b>用户名</b>：{$admin}</p>
-		<p><b>密 码</b>：您刚才设定的密码</p>";
+		<p>Ваш Emlog установлен! Теперь Вы можете начинать творить.</p>
+		<p><b>Пользователь</b>: {$admin}</p>
+		<p><b>Пароль</b>: указанный ранее</p>";
 	if (DEL_INSTALLER === 1 && !@unlink('./install.php') || DEL_INSTALLER === 0) {
-	    $result .= '<p style="color:red;margin:10px 20px;">警告：请手动删除根目录下安装文件：install.php</p> ';
+	    $result .= '<p style="color:red;margin:10px 20px;">Не забудбте удалить файл install.php</p> ';
 	}
-	$result .= "<p style=\"text-align:right;\"><a href=\"./\">访问首页</a> | <a href=\"./admin/\">登录后台</a></p>";
+	$result .= "<p style=\"text-align:right;\"><a href=\"./\">Главная</a> | <a href=\"./admin/\">Админпанель</a></p>";
 	emMsg($result, 'none');
 }
 ?>
