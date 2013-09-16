@@ -44,7 +44,7 @@
 <div class="list_footer">
 <a href="javascript:void(0);" id="select_all">Все</a> Выбранные элементы: <a href="javascript:bakact('del');" class="care">Удалить</a></div>
 </form>
-<div style="margin:20px 0px 20px 0px;"><a href="javascript:$('#import').hide();displayToggle('backup', 0);">Резервное копирование+</a>　<a href="javascript:$('#backup').hide();displayToggle('import', 0);">导入本地备份+</a></div>
+<div style="margin:20px 0px 20px 0px;"><a href="javascript:$('#import').hide();displayToggle('backup', 0);">Резервное копирование+</a>　<a href="javascript:$('#backup').hide();displayToggle('import', 0);">Восстановить данные</a></div>
 <form action="data.php?action=bakstart" method="post">
 <div id="backup">
 	<p>Выберите таблицы для резервного копирования базы данных:<br /><select multiple="multiple" size="12" name="table_box[]">
