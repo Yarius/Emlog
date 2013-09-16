@@ -3,7 +3,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 $isdraft = $hide == 'y' ? true : false;
 ?>
 <script charset="utf-8" src="./editor/kindeditor.js"></script>
-<script charset="utf-8" src="./editor/lang/zh_CN.js"></script>
+<script charset="utf-8" src="./editor/lang/en.js"></script>
 <div class=containertitle><b><?php if ($isdraft) :?>Редактирование статьи<?php else:?>Редактирование статьи<?php endif;?></b><span id="msg_2"></span></div><div id="msg"></div>
 <form action="save_log.php?action=edit" method="post" id="addlog" name="addlog">
 <div id="post">
