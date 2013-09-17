@@ -34,29 +34,29 @@
 		case Navi_Model::navitype_home:
 		case Navi_Model::navitype_t:
 		case Navi_Model::navitype_admin:
-			$value['type_name'] = '系统';
+			$value['type_name'] = 'Система';
 			break;
 		case Navi_Model::navitype_sort:
-			$value['type_name'] = '分类';
+			$value['type_name'] = 'Категория';
 			break;
 		case Navi_Model::navitype_page:
-			$value['type_name'] = '页面';
+			$value['type_name'] = 'страница';
 			break;
 		case Navi_Model::navitype_custom:
-			$value['type_name'] = '自定';
+			$value['type_name'] = 'Изменено';
 			break;
 	}
 	doAction('adm_navi_display');
 	?>  
       <tr>
 		<td><input class="num_input" name="navi[<?php echo $value['id']; ?>]" value="<?php echo $value['taxis']; ?>" maxlength="4" /></td>
-		<td><a href="navbar.php?action=mod&amp;navid=<?php echo $value['id']; ?>" title="Изменить навигации"><?php echo $value['naviname']; ?></a></td>
+		<td><a href="navbar.php?action=mod&amp;navid=<?php echo $value['id']; ?>" title="Редактировать"><?php echo $value['naviname']; ?></a></td>
 		<td class="tdcenter"><?php echo $value['type_name'];?></td>
 		<td class="tdcenter">
 		<?php if ($value['hide'] == 'n'): ?>
-		<a href="navbar.php?action=hide&amp;id=<?php echo $value['id']; ?>" title="Нажмите, чтобы скрыть навигации">Отображается</a>
+		<a href="navbar.php?action=hide&amp;id=<?php echo $value['id']; ?>" title="Нажмите, чтобы скрыть пункт меню">Отображается</a>
 		<?php else: ?>
-		<a href="navbar.php?action=show&amp;id=<?php echo $value['id']; ?>" title="Кликните для просмотра навигации" style="color:red;">Скрыто</a>
+		<a href="navbar.php?action=show&amp;id=<?php echo $value['id']; ?>" title="Нажмите, для отображения пунтка меню" style="color:red;">Скрыто</a>
 		<?php endif;?>
 		</td>
 		<td class="tdcenter">
@@ -72,7 +72,7 @@
         </td>
       </tr>
 	<?php endforeach;else:?>
-	  <tr><td class="tdcenter" colspan="4">Еще не добавлен навигации</td></tr>
+	  <tr><td class="tdcenter" colspan="4">Список пуст</td></tr>
 	<?php endif;?>
     </tbody>
   </table>
